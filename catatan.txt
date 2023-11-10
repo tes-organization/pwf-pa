@@ -1,0 +1,10 @@
+#buat share progress =
+//git push di branch sendiri 
+//syncronize
+//pindah ke branch main
+//git merge origin/namabranchesendiri
+
+#buat update progress dari kontributor lain =
+//git fetch origin dibranch mana aja bebas
+//masuk ke branch sendiri dulu
+//git pull --rebase origin main
