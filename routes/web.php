@@ -43,6 +43,9 @@ Route::get('/tambah-pengajuan-user', function () {
 Route::get('/dashboard', function () {
     return view('dashboard-staff');
 });
+Route::get('/pengajuan-staff', function () {
+    return view('pengajuan-staff');
+});
 
 //menampilkan spot
 Route::get('/spot-staff',[SpotController::class, 'indexstaff']);
@@ -51,11 +54,13 @@ Route::get('/spot-guest',[SpotController::class, 'indexguest']);
 
 //menampilkan pengajuan
 Route::get('/pengajuan-user',[PengajuanController::class, 'indexuser']);
+Route::get('/pengajuan-staff',[PengajuanController::class, 'indexstaff']);
 
 //menambah pengajuan
 Route::post('/tambah-pengajuan-user/store',[PengajuanController::class,'store']);
 
 //terima pengajuan
-Route::post('/terima-pengajuan-user',[PengajuanController::class,'updateterima']);
+Route::get('/terima-pengajuan-user/{no_pengajuan}',[PengajuanController::class,'updateterima']);
+
 //tolak pengajuan
-Route::post('/tolak-pengajuan-user',[PengajuanController::class,'updatetolak']);
+Route::get('/tolak-pengajuan-user/{no_pengajuan}',[PengajuanController::class,'edittolak']);

@@ -66,7 +66,9 @@
                             <td>{{$p -> lokasi}}</td>
                             <td>{{$p -> tgl_pengajuan}}</td>
                             <td>{{$p -> status}}</td>
-                            <td><a href="/terima-pengajuan-user" class="btn btn-success">Terima</a><a href="/tolak-pengajuan-user" class="btn btn-danger">Tolak</a></td>
+                            <td>
+                                <a href="/terima-pengajuan-user/{{$p->no_pengajuan}}" class="btn btn-success">Terima</a>
+                                <a href="/tolak-pengajuan-user/{{$p->no_pengajuan}}" class="btn btn-danger ms-3">Tolak</a></td>
                         </tr>
                     @endforeach
                 </tbody>

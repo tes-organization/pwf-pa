@@ -12,31 +12,23 @@ use Carbon\Carbon;
 
 class PengajuanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function indexuser()
     {
         $pengajuan = Pengajuan::all();
         return view('pengajuan-user',['pengajuanList'=>$pengajuan]);
     }
+
     public function indexstaff()
     {
         $pengajuan = Pengajuan::all();
         return view('pengajuan-staff',['pengajuanList'=>$pengajuan]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {   $tanggal = Carbon::today()->toDateString();
         $status = 'Diproses';
@@ -50,33 +42,33 @@ class PengajuanController extends Controller
         return redirect('/pengajuan-user');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
+    public function updateterima(Request $request)
+    {   
+        DB::table('pengajuan')->where('no_pengajuan',$request->no_pengajuan)->update([
+            'status' => "Diterima",
+        ]);
+        $updateterima = new \App\Http\Controllers\SpotController();
+        return $updateterima->store();
+        return redirect('/pengajuan-staff');
+    }
+    public function updatetolak(Request $request, string $id)
     {
-        //
+        DB::table('pengajuan')->where('no_pengajuan',$request->no_pengajuan)->update([
+            'status' => "Ditolak",
+        ]);
+        return redirect('/pengajuan-staff');
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    public function edit(string $no_pengajuan)
     {
-        
+
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
         //
