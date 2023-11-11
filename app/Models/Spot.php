@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Spot extends Model
 {
     use HasFactory;
-    protected $table = 'pengajuan';
-    protected $primaryKey = 'no_pengajuan';
-    protected $fillable = ['pengaju','kelurahan','lokasi','status'];
+    protected $table = 'spot';
+    protected $primaryKey = 'id_spot';
+    protected $fillable = ['kelurahan','lokasi','no_pengajuan'];
     public function pengajuanditerima(){
         return $this->belongsTo(Pengajuan::class, 'no_pengajuan', 'no_pengajuan');
     }

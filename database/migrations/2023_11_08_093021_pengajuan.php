@@ -16,11 +16,10 @@ return new class extends Migration
             $table->string('pengaju');
             $table->string('kelurahan');
             $table->string('lokasi');
-            $table->timestamp('tgl_pengajuan');
+            $table->date('tgl_pengajuan');
             $table->string('status');
 
             $table->foreign('kelurahan')->references('id_kelurahan')->on('kelurahan')->onDelete('cascade');
-            $table->foreign('pengaju')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

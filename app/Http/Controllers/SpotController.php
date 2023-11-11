@@ -3,15 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\Spot;
+use App\Models\Pengajuan;
+use App\Models\Kelurahan;
 
 class SpotController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function indexguest()
     {
-        //
+        $spot = Spot::all();
+        return view('spot-guest',['spotList'=>$spot]);
+    }
+    public function indexuser()
+    {
+        $spot = Spot::all();
+        return view('spot-user',['spotList'=>$spot]);
+    }
+    public function indexstaff()
+    {
+        $spot = Spot::all();
+        return view('spot-staff',['spotList'=>$spot]);
     }
 
     /**
