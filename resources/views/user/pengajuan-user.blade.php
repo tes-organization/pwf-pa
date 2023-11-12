@@ -19,19 +19,31 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
             <li>
-                <a href="/spot-user" class="nav-link active bg-success">
+<<<<<<< HEAD:resources/views/pengajuan-user.blade.php
+                <a href="/spot-user" class="nav-link text-white">
+=======
+                <a href="/spot" class="nav-link text-white">
+>>>>>>> origin/raya:resources/views/user/pengajuan-user.blade.php
                 Spot
                 </a>
             </li>
             <li>
-                <a href="/pengajuan-user" class="nav-link text-white">
+                <a href="/pengajuan" class="nav-link active bg-success">
                 Pengajuan
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white">
+                <a href="/bantuan-user" class="nav-link text-white">
                 Bantuan
                 </a>
+            </li>
+            <li>
+                <form action="/keluar" method="POST">
+                    @csrf
+                    <button class="nav-link text-white">
+                    Keluar
+                    </button>
+                </form>
             </li>
             </ul>
             <hr>
@@ -43,26 +55,36 @@
             </div>
         </div>
 
+        
         <div class="">
-            <h4 class="md-3">Daftar Spot Bak Sampah Kecamatan Sungai Kunjang</h4>
-            <table class="table">
+            <h4 class="mt-3">Daftar Pengajuan Spot Bak Sampah Baru Kecamatan Sungai Kunjang</h4>
+            <table class="table table-success">
                 <thead>
                     <tr>
-                        <th>ID Spot</th>
+                        <th>Nomor Pengajuan</th>
+                        <th>Pengaju</th>
                         <th>Kelurahan</th>
                         <th>Lokasi Spesifik</th>
+                        <th>Tanggal Pengajuan</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($spotList as $s)
+                    @foreach ($pengajuanList as $p)
                         <tr>
-                            <td>{{$s -> id_spot}}</td>
-                            <td>{{$s -> kelurahanspot['kelurahan']}}
-                            <td>{{$s -> lokasi}}</td>
+                            <td>{{$p -> no_pengajuan}}</td>
+                            <td>{{$p -> pengaju}}</td>
+                            <td>{{$p -> kelurahanpengajuan['kelurahan']}}
+                            <td>{{$p -> lokasi}}</td>
+                            <td>{{$p -> tgl_pengajuan}}</td>
+                            <td>{{$p -> status}}</td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
+            <div>
+                <a href="/tambah-pengajuan-user" class="btn btn-success">Ajukan Spot Baru</a>
+            </div>
         </div>
     </div>
 </body>

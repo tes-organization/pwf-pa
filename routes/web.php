@@ -3,8 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SpotController;
 use App\Http\Controllers\PengajuanController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AutentikasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,18 +18,16 @@ use App\Http\Controllers\LoginController;
 
 //umum
 Route::get('/', function () {
-    return view('./landingPage/landingPage');
-});
-Route::get('/login', function () {
-    return view('login');
+    return view('landingPage/landingPage');
 });
 Route::get('/spot-guest', function () {
-    return view('spot-guest');
+    return view('guest/spot-guest');
 });
 Route::get('/bantuan-guest', function () {
     return view('bantuan-guest');
 });
 
+<<<<<<< HEAD
 //user
 Route::get('/basedashboard', function () {
     return view('./base/basedashboard');
@@ -44,22 +41,24 @@ Route::get('/tambah-pengajuan-user', function () {
 Route::get('/bantuan-user', function () {
     return view('bantuan-user');
 });
+=======
+// Register
+Route::get('/registrasi',[AutentikasiController::class, 'viewRegistrasi']);
+Route::post('/registrasi',[AutentikasiController::class, 'registrasi']);
+>>>>>>> origin/raya
 
-//staff
-Route::get('/dashboard', function () {
-    return view('dashboard-staff');
-});
-Route::get('/pengajuan-staff', function () {
-    return view('pengajuan-staff');
-});
+// Login
+Route::get('/masuk',[AutentikasiController::class, 'viewMasuk'])->name('login');
+Route::post('/masuk',[AutentikasiController::class, 'masuk']);
+Route::post('/keluar',[AutentikasiController::class, 'keluar']);
 
 //menampilkan spot
 Route::get('/spot-staff',[SpotController::class, 'indexstaff']);
-Route::get('/spot-user',[SpotController::class, 'indexuser']);
+Route::get('/spot',[SpotController::class, 'indexuser'])->middleware('auth');
 Route::get('/spot-guest',[SpotController::class, 'indexguest']);
 
 //menampilkan pengajuan
-Route::get('/pengajuan-user',[PengajuanController::class, 'indexuser']);
+Route::get('/pengajuan',[PengajuanController::class, 'indexuser']);
 Route::get('/pengajuan-staff',[PengajuanController::class, 'indexstaff']);
 
 //menambah pengajuan
