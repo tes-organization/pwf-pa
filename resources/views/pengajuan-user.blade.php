@@ -19,7 +19,7 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
             <li>
-                <a href="#" class="nav-link text-white">
+                <a href="/spot-user" class="nav-link text-white">
                 Spot
                 </a>
             </li>
@@ -29,7 +29,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white">
+                <a href="/bantuan-user" class="nav-link text-white">
                 Bantuan
                 </a>
             </li>
@@ -45,13 +45,14 @@
 
         
         <div class="">
-            <table class="table">
+            <h4 class="mt-3">Daftar Pengajuan Spot Bak Sampah Baru Kecamatan Sungai Kunjang</h4>
+            <table class="table table-success">
                 <thead>
                     <tr>
                         <th>Nomor Pengajuan</th>
                         <th>Pengaju</th>
                         <th>Kelurahan</th>
-                        <th>Lokasi</th>
+                        <th>Lokasi Spesifik</th>
                         <th>Tanggal Pengajuan</th>
                         <th>Status</th>
                     </tr>
@@ -69,9 +70,9 @@
                     @endforeach
                 </tbody>
             </table>
-        </div>
-        <div>
-            <a href="/tambah-pengajuan-user" class="btn btn-success">Ajukan Sekarang</a>
+            <div>
+                <a href="/tambah-pengajuan-user" class="btn btn-success">Ajukan Spot Baru</a>
+            </div>
         </div>
     </div>
 </body>

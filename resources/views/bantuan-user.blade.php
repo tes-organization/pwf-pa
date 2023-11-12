@@ -19,7 +19,7 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
             <li>
-                <a href="/spot-user" class="nav-link active bg-success">
+                <a href="/spot-user" class="nav-link text-white">
                 Spot
                 </a>
             </li>
@@ -29,7 +29,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="nav-link text-white">
+                <a href="/bantuan-user" class="nav-link active bg-success">
                 Bantuan
                 </a>
             </li>
@@ -42,27 +42,30 @@
                 </a>            
             </div>
         </div>
-
-        <div class="">
-            <h4 class="md-3">Daftar Spot Bak Sampah Kecamatan Sungai Kunjang</h4>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>ID Spot</th>
-                        <th>Kelurahan</th>
-                        <th>Lokasi Spesifik</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($spotList as $s)
-                        <tr>
-                            <td>{{$s -> id_spot}}</td>
-                            <td>{{$s -> kelurahanspot['kelurahan']}}
-                            <td>{{$s -> lokasi}}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
+        <div class="contactUs">
+            <div class="title">
+                <h2 class="text-success">Pusat Bantuan</h2>
+            </div>
+            <div class="box">
+                <div class="contact form">
+                    <h4>Hubungi kami di :</h4>
+                </div>
+                <div class="contact info">
+                    <h4>Informasi Kontak</h4>
+                    <div class="infoBox">
+                        <div>
+                            <span></span>
+                            <p>Kec. Sungai Kunjang, Kota Samarinda, Kalimantan Timur<br>INDONESIA</p>
+                        </div>
+                        <div>
+                            <span></span>
+                            <a href="mailto:dlh@kaltimprov.go.id. "></a>
+                            <a href="mailto:kec.sungaikunjang@gmail.com "></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact map"></div>
+            </div>
         </div>
     </div>
 </body>
