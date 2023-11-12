@@ -38,6 +38,9 @@ Route::get('/pengajuan-user', function () {
 Route::get('/tambah-pengajuan-user', function () {
     return view('tambah-pengajuan-user');
 });
+Route::get('/bantuan-user', function () {
+    return view('bantuan-user');
+});
 
 //staff
 Route::get('/dashboard', function () {
@@ -63,4 +66,7 @@ Route::post('/tambah-pengajuan-user/store',[PengajuanController::class,'store'])
 Route::get('/terima-pengajuan-user/{no_pengajuan}',[PengajuanController::class,'updateterima']);
 
 //tolak pengajuan
-Route::get('/tolak-pengajuan-user/{no_pengajuan}',[PengajuanController::class,'edittolak']);
+Route::get('/tolak-pengajuan-user/{no_pengajuan}',[PengajuanController::class,'updatetolak']);
+
+//hapus spot
+Route::get('/hapus-spot/{no_pengajuan}',[SpotController::class,'destroy']);

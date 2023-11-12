@@ -28,7 +28,8 @@
             Lokasi Spesifik :
             <input type="text" name="lokasi" placeholder="Tunjukan lokasi spesifik"><br>
             
-            <br><input type="submit" value="Ajukan Spot Baru">
+            <br><input type="submit" value="Ajukan Spot Baru" class="btn btn-success">
+            <a href="/pengajuan-user" class="btn btn-danger">Batalkan</a>
         </form>
     </div>
 </body>

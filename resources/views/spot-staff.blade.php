@@ -19,12 +19,12 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
             <li>
-                <a href="/spot-user" class="nav-link active bg-success">
+                <a href="/spot-staff" class="nav-link active bg-success">
                 Spot
                 </a>
             </li>
             <li>
-                <a href="/pengajuan-user" class="nav-link text-white">
+                <a href="/pengajuan-staff" class="nav-link text-white">
                 Pengajuan
                 </a>
             </li>
@@ -51,6 +51,7 @@
                         <th>ID Spot</th>
                         <th>Kelurahan</th>
                         <th>Lokasi Spesifik</th>
+                        <th>Opsi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -59,6 +60,9 @@
                             <td>{{$s -> id_spot}}</td>
                             <td>{{$s -> kelurahanspot['kelurahan']}}
                             <td>{{$s -> lokasi}}</td>
+                            <td>
+                                <a href="/hapus-spot/{{$s->no_pengajuan}}" class="btn btn-danger ms-3">Hapus</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>

@@ -19,7 +19,7 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
             <li>
-                <a href="#" class="nav-link text-white">
+                <a href="/spot-staff" class="nav-link text-white">
                 Spot
                 </a>
             </li>
@@ -45,13 +45,14 @@
 
         
         <div class="">
+            <h4 class="md-3">Daftar Pengajuan Spot Bak Sampah Baru Kecamatan Sungai Kunjang</h4>
             <table class="table">
                 <thead>
                     <tr>
                         <th>Nomor Pengajuan</th>
                         <th>Pengaju</th>
                         <th>Kelurahan</th>
-                        <th>Lokasi</th>
+                        <th>Lokasi Spesifik</th>
                         <th>Tanggal Pengajuan</th>
                         <th>Status</th>
                         <th>Opsi</th>
@@ -68,14 +69,12 @@
                             <td>{{$p -> status}}</td>
                             <td>
                                 <a href="/terima-pengajuan-user/{{$p->no_pengajuan}}" class="btn btn-success">Terima</a>
-                                <a href="/tolak-pengajuan-user/{{$p->no_pengajuan}}" class="btn btn-danger ms-3">Tolak</a></td>
+                                <a href="/tolak-pengajuan-user/{{$p->no_pengajuan}}" class="btn btn-danger ms-3">Tolak</a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
-        </div>
-        <div>
-            <a href="/tambah-pengajuan-user" class="btn btn-success">Ajukan Sekarang</a>
         </div>
     </div>
 </body>

@@ -15,4 +15,7 @@ class Spot extends Model
     public function pengajuanditerima(){
         return $this->belongsTo(Pengajuan::class, 'no_pengajuan', 'no_pengajuan');
     }
+    public function kelurahanspot(){
+        return $this->belongsTo(Kelurahan::class, 'kelurahan', 'id_kelurahan');
+    }
 }

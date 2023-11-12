@@ -72,8 +72,19 @@ class SpotController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request)
     {
-        //
+        DB::table('spot')->where('no_pengajuan', $request->no_pengajuan)->delete();
+
+        $hapusspot = Pengajuan::find($request->no_pengajuan);
+        if ($hapusspot) {
+            // Menghapus record data dalam tabel pengajuan
+            $hapusspot->delete();
+
+            return redirect('/spot-staff')->with('success', 'Spot berhasil dihapus.');
+        } else {
+            return redirect('/spot-staff')->with('error', 'Spot tidak ditemukan.');
+        }
+        return redirect('/spot-staff');
     }
 }
