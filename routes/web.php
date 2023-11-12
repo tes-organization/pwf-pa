@@ -27,6 +27,9 @@ Route::get('/login', function () {
 Route::get('/spot-guest', function () {
     return view('spot-guest');
 });
+Route::get('/bantuan-guest', function () {
+    return view('bantuan-guest');
+});
 
 //user
 Route::get('/basedashboard', function () {

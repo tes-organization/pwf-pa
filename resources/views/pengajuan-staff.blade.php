@@ -28,11 +28,6 @@
                 Pengajuan
                 </a>
             </li>
-            <li>
-                <a href="#" class="nav-link text-white">
-                Bantuan
-                </a>
-            </li>
             </ul>
             <hr>
             <div class="">
