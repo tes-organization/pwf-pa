@@ -19,12 +19,12 @@
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
             <li>
-                <a href="#" class="nav-link text-white">
+                <a href="/spot" class="nav-link text-white">
                 Spot
                 </a>
             </li>
             <li>
-                <a href="/pengajuan-user" class="nav-link active bg-success">
+                <a href="/pengajuan" class="nav-link active bg-success">
                 Pengajuan
                 </a>
             </li>
@@ -32,6 +32,14 @@
                 <a href="#" class="nav-link text-white">
                 Bantuan
                 </a>
+            </li>
+            <li>
+                <form action="/keluar" method="POST">
+                    @csrf
+                    <button class="nav-link text-white">
+                    Keluar
+                    </button>
+                </form>
             </li>
             </ul>
             <hr>

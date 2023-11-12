@@ -11,7 +11,7 @@
                 <figure>
                     <img src="assets/img/garbage-activity.png" alt="">
                 </figure>
-                <a href="/login" class="btn btn-outline-success">Ajukan Sekarang</a>
+                <a href="/spot" class="btn btn-outline-success">Ajukan Sekarang</a>
             </article>
         </div>
     </section>

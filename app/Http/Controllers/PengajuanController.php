@@ -15,13 +15,13 @@ class PengajuanController extends Controller
     public function indexuser()
     {
         $pengajuan = Pengajuan::all();
-        return view('pengajuan-user',['pengajuanList'=>$pengajuan]);
+        return view('user/pengajuan-user',['pengajuanList'=>$pengajuan]);
     }
 
     public function indexstaff()
     {
         $pengajuan = Pengajuan::all();
-        return view('pengajuan-staff',['pengajuanList'=>$pengajuan]);
+        return view('staff/pengajuan-staff',['pengajuanList'=>$pengajuan]);
     }
 
     public function create()
