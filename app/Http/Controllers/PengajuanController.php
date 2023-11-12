@@ -52,8 +52,22 @@ class PengajuanController extends Controller
         DB::table('pengajuan')->where('no_pengajuan',$request->no_pengajuan)->update([
             'status' => "Diterima",
         ]);
-        $updateterima = new \App\Http\Controllers\SpotController();
-        return $updateterima->store();
+        // $updateterima = new \App\Http\Controllers\SpotController();
+        // return $updateterima->store();
+
+        $pengajuan = Pengajuan::find($request->no_pengajuan);
+        if ($pengajuan) {
+            // Membuat record baru dalam tabel spot
+            $spot = new Spot();
+            $spot->kelurahan = $pengajuan->kelurahan; // Sesuaikan dengan nama kolom dan atribut yang sesuai
+            $spot->lokasi = $pengajuan->lokasi;
+            $spot->no_pengajuan = $request->no_pengajuan;
+            $spot->save();
+
+            return redirect('/pengajuan-staff')->with('success', 'Spot berhasil dibuat dari Pengajuan.');
+        } else {
+            return redirect()->back()->with('error', 'Pengajuan tidak ditemukan.');
+        }
         return redirect('/pengajuan-staff');
     }
     public function updatetolak(Request $request, string $id)
