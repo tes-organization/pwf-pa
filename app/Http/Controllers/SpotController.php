@@ -16,17 +16,17 @@ class SpotController extends Controller
     public function indexguest()
     {
         $spot = Spot::all();
-        return view('spot-guest',['spotList'=>$spot]);
+        return view('guest/spot-guest',['spotList'=>$spot]);
     }
     public function indexuser()
     {
         $spot = Spot::all();
-        return view('spot-user',['spotList'=>$spot]);
+        return view('user/spot-user',['spotList'=>$spot]);
     }
     public function indexstaff()
     {
         $spot = Spot::all();
-        return view('spot-staff',['spotList'=>$spot]);
+        return view('staff/spot-staff',['spotList'=>$spot]);
     }
 
     /**

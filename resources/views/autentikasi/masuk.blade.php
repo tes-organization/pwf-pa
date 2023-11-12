@@ -28,11 +28,9 @@
                     <label>Belum punya akun? <a href="/register" class="link-success link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Register sekarang!</a></label>
                 </div>
                 
+                
                 <div class="d-grid mt-5" >
                     <button type="submit" class="btn btn-success btn-login">Masuk</button>
-                </div>
-                <div class="d-flex align-items-end justify-content-center fs-8 mt-2">
-                  <label>Kembali ke <a href="/" class="link-success link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">halaman utama</a></label>
                 </div>
               </form>
             </div>
