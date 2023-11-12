@@ -40,6 +40,14 @@ nav{
     height: 50vh;
 }
 
+.vh40-height {
+    height: 40vh;
+}
+
+.vh30-height {
+    height: 30vh;
+}
+
 .logo-width{
     width: 10rem;
 }

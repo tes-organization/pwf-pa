@@ -48,6 +48,57 @@
             </article>
         </div>
     </section>
+
+    <section class="container py-5 my-5 text-center d-flex justify-content-center align-items-center">
+        <div class="row">
+            <div class="col text-success-emphasis">
+                <div class="border border-success border-2 p-1 rounded-5">
+                    <article class="border border-success border-2 rounded-5 d-flex justify-content-center align-items-center">
+                        <span class="p-5">5</span>
+                    </article>
+                </div>
+                <h5 class="fs-6">Pengajuan Disetujui</h5>
+            </div>
+            <div class="col text-warning-emphasis">
+                <div class="border border-warning border-2 p-1 rounded-5">
+                    <article class="border border-warning border-2 rounded-5 d-flex justify-content-center align-items-center">
+                        <span class="p-5">5</span>
+                    </article>
+                </div>
+                <h5 class="fs-6 ">Pengajuan Diproses</h5>
+            </div>
+            <div class="col text-danger-emphasis">
+                <div class="border border-danger border-2 p-1 rounded-5">
+                    <article class="border border-danger border-2 rounded-5 d-flex justify-content-center align-items-center">
+                        <span class="p-5">5</span>
+                    </article>
+                </div>
+                <h5 class="fs-6">Pengajuan Ditolak</h5>
+            </div>
+        </div>
+    </section>
+
+    <footer class="vh40-height bg-black text-light d-flex justify-content-center align-items-center">
+        <div class="container row">
+            <div class="col d-flex flex-column">
+                <span class="text-success d-flex align-items-center gap-2 fs-3">
+                    <img src="assets/logo/garbage-truck.png" alt="">
+                    SPSBS
+                </span>
+                <span class="fs-5 text-light text-opacity-75">Sistem Pengajuan Spot Bak Sampah</span>
+                <span class="fs-6 text-light text-opacity-50 pb-5">Kecamatan Sungai Kunjang, Kota Samarinda, Kalimantan Timur, Indonesia</span>
+                <span class="text-light text-opacity-25">© 2023 Raya Prasetya. All rights reserved</span>
+            </div>
+            <div class="container col d-flex flex-column justify-content-center align-items-end">
+                <a class="text-light text-opacity-75 link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="mailto:kec.sungaikunjang@gmail.com" target="_blank">
+                    kec.sungaikunjang@gmail.com ✉️
+                </a>
+                <a class="text-light text-opacity-75 link-light link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://www.google.com/search?q=nomor+telpon+dlh+sungai+kunjnag&oq=nomor+telpon+dlh+sungai+kunjnag&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiiBDIHCAIQABiiBDIHCAMQABiiBDIHCAQQABiiBNIBCDc3NDVqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8#">
+                    +(0541)743450 ☎️
+                </a>
+            </div>
+        </div>
+    </footer>
 </main>
 
 
