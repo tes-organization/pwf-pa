@@ -10,6 +10,7 @@ class Spot extends Model
     use HasFactory;
     protected $table = 'spot';
     protected $primaryKey = 'id_spot';
+    public $timestamps = false;
     protected $fillable = ['kelurahan','lokasi','no_pengajuan'];
     public function pengajuanditerima(){
         return $this->belongsTo(Pengajuan::class, 'no_pengajuan', 'no_pengajuan');
