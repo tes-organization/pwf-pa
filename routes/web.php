@@ -27,7 +27,6 @@ Route::get('/bantuan-guest', function () {
     return view('bantuan-guest');
 });
 
-<<<<<<< HEAD
 //user
 Route::get('/basedashboard', function () {
     return view('./base/basedashboard');
@@ -41,11 +40,9 @@ Route::get('/tambah-pengajuan-user', function () {
 Route::get('/bantuan-user', function () {
     return view('bantuan-user');
 });
-=======
 // Register
 Route::get('/registrasi',[AutentikasiController::class, 'viewRegistrasi']);
 Route::post('/registrasi',[AutentikasiController::class, 'registrasi']);
->>>>>>> origin/raya
 
 // Login
 Route::get('/masuk',[AutentikasiController::class, 'viewMasuk'])->name('login');
