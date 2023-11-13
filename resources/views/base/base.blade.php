@@ -20,8 +20,8 @@
                 <div class="d-flex gap-5">
                     <a href="/" class="link-success link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Utama</a>
                     <a href="/spot-guest" class="link-success link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Spot</a>
-                    <a href="/bantuan-guest" class="link-success link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Bantuan</a>
-                    <a href="/login" class="link-success link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Beranda</a>
+                    <a href="#" class="link-success link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Bantuan</a>
+                    <a href="/dasbor-spot" target="_blank" class="link-success link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Dasbor</a>
                 </div>
             </div>
           </nav>

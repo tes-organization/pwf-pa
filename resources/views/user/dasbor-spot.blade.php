@@ -28,6 +28,19 @@
                 Pengajuan
                 </a>
             </li>
+            <li>
+                <a href="/dasbor-bantuan" class="nav-link text-white">
+                Bantuan
+                </a>
+            </li>
+            <li>
+                <form action="/keluar" method="POST">
+                    @csrf
+                    <button class="nav-link text-white">
+                    Keluar
+                    </button>
+                </form>
+            </li>
             </ul>
             <hr>
             <div class="">

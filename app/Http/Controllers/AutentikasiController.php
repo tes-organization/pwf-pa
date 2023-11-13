@@ -45,7 +45,7 @@ class AutentikasiController extends Controller
         ]);
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/spot'); 
+            return redirect()->intended('/dasbor-spot'); 
         }
         
         return back()->with('loginError','The provided credentials do not match our records !');
