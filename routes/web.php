@@ -39,6 +39,7 @@ Route::middleware(['auth', 'cekrole:user'])->group(function () {
     Route::get('/dasbor-pengajuan',[PengajuanController::class, 'indexuser']);
     Route::get('/dasbor-bantuan',[PengajuanController::class, 'viewBantuan']);
     Route::get('/pengajuan',[PengajuanController::class, 'indexuser']);
+    Route::post('/tambah-pengajuan',[PengajuanController::class, 'store']);
 });
 
 // Dasbor Staff
