@@ -62,8 +62,8 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <form class="container d-flex flex-column" action="/tambah-pengajuan-user/store" method="post">
-                                    {{ csrf_field() }}
+                                <form class="container d-flex flex-column" action="/tambah-pengajuan" method="post">
+                                    @csrf
                                     <label for="kelurahan">Kelurahan :</label> 
                                     <select name="kelurahan" id="kelurahan" class="form-select" cols="30" rows="10" placeholder="Pilih lokasi kelurahan">
                                         @foreach ($kelurahanList as $kelurahan)
