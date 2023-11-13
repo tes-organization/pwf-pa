@@ -31,6 +31,8 @@ class AutentikasiController extends Controller
 
         $validated['password'] = bcrypt($validated['password']);
 
+        $validated['role'] = 'user';
+
         User::create($validated);
 
         $request->session()->flash('success', "Register Succesfully !");
@@ -45,7 +47,12 @@ class AutentikasiController extends Controller
         ]);
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/dasbor-spot'); 
+            if(auth()->user()->role =='staff'){
+                return redirect()->intended('/spot-staff'); 
+            }
+            if(auth()->user()->role =='user'){
+                return redirect()->intended('/dasbor-spot'); 
+            }
         }
         
         return back()->with('loginError','The provided credentials do not match our records !');

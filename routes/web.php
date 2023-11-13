@@ -34,27 +34,21 @@ Route::post('/masuk',[AutentikasiController::class, 'masuk']);
 Route::post('/keluar',[AutentikasiController::class, 'keluar']);
 
 //Dasbor User
-Route::get('/dasbor-spot',[SpotController::class, 'indexuser'])->middleware('auth');
-Route::get('/dasbor-pengajuan',[PengajuanController::class, 'indexuser']);
-Route::get('/dasbor-tambah-pengajuan',[PengajuanController::class, 'viewTambahPengajuan']);
-Route::get('/dasbor-bantuan',[PengajuanController::class, 'viewBantuan']);
+Route::middleware(['auth', 'cekrole:user'])->group(function () {
+    Route::get('/dasbor-spot',[SpotController::class, 'indexuser']);
+    Route::get('/dasbor-pengajuan',[PengajuanController::class, 'indexuser']);
+    Route::get('/dasbor-bantuan',[PengajuanController::class, 'viewBantuan']);
+    Route::get('/pengajuan',[PengajuanController::class, 'indexuser']);
+});
 
 // Dasbor Staff
-Route::get('/spot-staff',[SpotController::class, 'indexstaff']);
+Route::middleware(['auth', 'cekrole:staff'])->group(function () {
+    Route::get('/pengajuan-staff',[PengajuanController::class, 'indexstaff']);
+    Route::get('/spot-staff',[SpotController::class, 'indexstaff']);
+    Route::get('/tolak-pengajuan-user/{no_pengajuan}',[PengajuanController::class,'updatetolak']);
+    Route::get('/hapus-spot/{no_pengajuan}',[SpotController::class,'destroy']);
+    Route::get('/terima-pengajuan-user/{no_pengajuan}',[PengajuanController::class,'updateterima']);
+});
+
 Route::get('/spot-guest',[SpotController::class, 'indexguest']);
 
-//menampilkan pengajuan
-Route::get('/pengajuan',[PengajuanController::class, 'indexuser']);
-Route::get('/pengajuan-staff',[PengajuanController::class, 'indexstaff']);
-
-//menambah pengajuan
-Route::post('/tambah-pengajuan-user/store',[PengajuanController::class,'store']);
-
-//terima pengajuan
-Route::get('/terima-pengajuan-user/{no_pengajuan}',[PengajuanController::class,'updateterima']);
-
-//tolak pengajuan
-Route::get('/tolak-pengajuan-user/{no_pengajuan}',[PengajuanController::class,'updatetolak']);
-
-//hapus spot
-Route::get('/hapus-spot/{no_pengajuan}',[SpotController::class,'destroy']);
