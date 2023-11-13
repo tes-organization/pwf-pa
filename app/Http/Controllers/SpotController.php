@@ -21,7 +21,7 @@ class SpotController extends Controller
     public function indexuser()
     {
         $spot = Spot::all();
-        return view('user/spot-user',['spotList'=>$spot]);
+        return view('user/dasbor-spot',['spotList'=>$spot]);
     }
     public function indexstaff()
     {
