@@ -23,23 +23,7 @@ Route::get('/', function () {
 Route::get('/spot-guest', function () {
     return view('guest/spot-guest');
 });
-Route::get('/bantuan-guest', function () {
-    return view('bantuan-guest');
-});
 
-//user
-Route::get('/basedashboard', function () {
-    return view('./base/basedashboard');
-});
-Route::get('/pengajuan-user', function () {
-    return view('pengajuan-user');
-});
-Route::get('/tambah-pengajuan-user', function () {
-    return view('tambah-pengajuan-user');
-});
-Route::get('/bantuan-user', function () {
-    return view('bantuan-user');
-});
 // Register
 Route::get('/registrasi',[AutentikasiController::class, 'viewRegistrasi']);
 Route::post('/registrasi',[AutentikasiController::class, 'registrasi']);
@@ -49,9 +33,14 @@ Route::get('/masuk',[AutentikasiController::class, 'viewMasuk'])->name('login');
 Route::post('/masuk',[AutentikasiController::class, 'masuk']);
 Route::post('/keluar',[AutentikasiController::class, 'keluar']);
 
-//menampilkan spot
+//Dasbor User
+Route::get('/dasbor-spot',[SpotController::class, 'indexuser'])->middleware('auth');
+Route::get('/dasbor-pengajuan',[PengajuanController::class, 'indexuser']);
+Route::get('/dasbor-tambah-pengajuan',[PengajuanController::class, 'viewTambahPengajuan']);
+Route::get('/dasbor-bantuan',[PengajuanController::class, 'viewBantuan']);
+
+// Dasbor Staff
 Route::get('/spot-staff',[SpotController::class, 'indexstaff']);
-Route::get('/spot',[SpotController::class, 'indexuser'])->middleware('auth');
 Route::get('/spot-guest',[SpotController::class, 'indexguest']);
 
 //menampilkan pengajuan
