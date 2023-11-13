@@ -23,7 +23,23 @@ Route::get('/', function () {
 Route::get('/spot-guest', function () {
     return view('guest/spot-guest');
 });
+Route::get('/bantuan-guest', function () {
+    return view('bantuan-guest');
+});
 
+//user
+Route::get('/basedashboard', function () {
+    return view('./base/basedashboard');
+});
+Route::get('/pengajuan-user', function () {
+    return view('pengajuan-user');
+});
+Route::get('/tambah-pengajuan-user', function () {
+    return view('tambah-pengajuan-user');
+});
+Route::get('/bantuan-user', function () {
+    return view('bantuan-user');
+});
 // Register
 Route::get('/registrasi',[AutentikasiController::class, 'viewRegistrasi']);
 Route::post('/registrasi',[AutentikasiController::class, 'registrasi']);
