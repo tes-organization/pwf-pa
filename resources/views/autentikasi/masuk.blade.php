@@ -15,17 +15,18 @@
             <div class="card-body pt-5 mt-5">
               <h5 class="d-flex card-title justify-content-center text-success fs-4">Masuk ke Akun Pengguna</h5>
               <h6 class="d-flex card-subtitle text-mute mb-5 fs-8 justify-content-center">Login terlebih dahulu untuk mengakses layanan ini!</h6>
-              <form>
+              <form action="/masuk" method="POST">
+                @csrf
                 <div class="mb-4">
                   <label for="exampleInputEmail1" class="form-label text-success">Surel</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan email Anda!">
+                  <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan email Anda!">
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label text-success">Kata Sandi*</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Masukan password Anda!">
+                  <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Masukan password Anda!">
                 </div>                
                 <div class="d-flex align-items-end fs-8">
-                    <label>Belum punya akun? <a href="/register" class="link-success link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Register sekarang!</a></label>
+                    <label>Belum punya akun? <a href="/registrasi" class="link-success link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Register sekarang!</a></label>
                 </div>
                 
                 

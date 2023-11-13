@@ -15,7 +15,8 @@ class PengajuanController extends Controller
     public function indexuser()
     {
         $pengajuan = Pengajuan::all();
-        return view('user/pengajuan-user',['pengajuanList'=>$pengajuan]);
+        $kelurahan = Kelurahan::all();
+        return view('user/dasbor-pengajuan',['pengajuanList'=>$pengajuan], ['kelurahanList'=> $kelurahan]);
     }
 
     public function indexstaff()
@@ -29,17 +30,22 @@ class PengajuanController extends Controller
         //
     }
 
+    public function viewBantuan(){
+        return view('user/dasbor-bantuan');
+    }
+
     public function store(Request $request)
     {   $tanggal = Carbon::today()->toDateString();
         $status = 'Diproses';
+        $logged = auth()->user()->name;
         DB::table("pengajuan")->insert([
-            'pengaju' => $request-> pengaju,
+            'pengaju' => $logged,
             'kelurahan' => $request-> kelurahan,
             'lokasi' => $request-> lokasi,
             'tgl_pengajuan'=>$tanggal,
             'status'=> $status,
         ]);
-        return redirect('/pengajuan-user');
+        return redirect('/dasbor-pengajuan');
     }
 
     public function show(string $id)

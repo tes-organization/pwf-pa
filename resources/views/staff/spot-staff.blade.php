@@ -11,28 +11,23 @@
 </head>
 <body>
     <div class="d-flex">
-        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px; height: 100vh;">
-            <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                <img src="assets/logo/garbage-truck.png" class="ms-4">
-                <span class="fs-4 ms-3">SPSBS</span>
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-success" style="width: 280px; height: 100vh;">
+            <div class="d-flex text-dark flex-column w-100 justify-content-center align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <span class="fs-3">DASBOR</span>
+                <span class="fs-4">STAFF SPSBS</span>
             </div>
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
-            <li>
-                <a href="/spot-staff" class="nav-link active bg-success">
-                Spot
-                </a>
-            </li>
-            <li>
-                <a href="/pengajuan-staff" class="nav-link text-white">
-                Pengajuan
-                </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link text-white">
-                Bantuan
-                </a>
-            </li>
+                <li>
+                    <a href="/spot-staff" class="nav-link active bg-light text-dark">
+                    Spot
+                    </a>
+                </li>
+                <li>
+                    <a href="/pengajuan-staff" class="nav-link text-white">
+                    Pengajuan
+                    </a>
+                </li>
             </ul>
             <hr>
             <div class="">
@@ -43,9 +38,9 @@
             </div>
         </div>
 
-        <div class="">
-            <h4 class="md-3">Daftar Spot Bak Sampah Kecamatan Sungai Kunjang</h4>
-            <table class="table">
+        <div class="container bg-dark">
+            <h4 class="text-light py-3 text-center">Daftar Spot Bak Sampah Kecamatan Sungai Kunjang</h4>
+            <table class="table table-dark">
                 <thead>
                     <tr>
                         <th>ID Spot</th>
