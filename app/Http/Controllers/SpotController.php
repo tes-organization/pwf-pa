@@ -13,10 +13,10 @@ class SpotController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function indexguest()
+    public function __invoke()
     {
         $spot = Spot::all();
-        return view('guest/spot-guest',['spotList'=>$spot]);
+        return view('landingPage/landingPage',['spotList'=>$spot]);
     }
     public function indexuser()
     {
