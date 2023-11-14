@@ -64,8 +64,8 @@
                         <a class="text-dark text-opacity-75 link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="mailto:kec.sungaikunjang@gmail.com">
                             ✉️ kec.sungaikunjang@gmail.com
                         </a>
-                        <a class="text-dark text-opacity-75 link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://www.google.com/search?q=nomor+telpon+dlh+sungai+kunjnag&oq=nomor+telpon+dlh+sungai+kunjnag&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiiBDIHCAIQABiiBDIHCAMQABiiBDIHCAQQABiiBNIBCDc3NDVqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8#">
-                            ☎️ +(0541)743450
+                        <a class="text-dark text-opacity-75 link-dark link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="https://wa.link/c757u0">
+                            ☎️ +6283152633635
                         </a>
                     </div>
                 </div>
