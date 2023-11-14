@@ -3,16 +3,17 @@
 ![image](https://github.com/tes-organization/pwf-pa/assets/102443842/a09a7f76-188a-4237-9c97-f3099c197f05)
 Landing page merupakan halaman awal ketika user mengakses alamat domain dari website sebagai informasi pengenalan website
 Pada halaman ini, user masih berstatus sebagai 'Guest'
-Guest memiliki beberapa akses halaman yang bisa diakses melalui
+Guest memiliki beberapa akses halaman yang bisa dituju melalui navbar yang terdapat pada landing-page, seperti opsi halaman bantuan dan opsi spot yang akan menampilkan pop-up daftar spot bak sampah yang tersedia
 
-## Login
+Untuk mengakses fitur lainnya pada website SPSBS, user bisa melakukan login terlebih dahulu melalui opsi dasbor pada navbar
 ![image](https://github.com/tes-organization/pwf-pa/assets/102443842/814f8a5c-cfba-4066-a33f-e4c7df13cc6c)
 
-## Registrasi
+Selain melakukan login, user juga bisa melakukan registrasi akun pengguna baru melalui link yang terdapat pada halaman login.
 ![image](https://github.com/tes-organization/pwf-pa/assets/102443842/244791c8-310e-4559-b560-ad554b819e9d)
 
 ## Dasbor User
 ### Dasbor User - Spot
+
 ![image](https://github.com/tes-organization/pwf-pa/assets/102443842/0ab24a39-843d-4026-b055-aeebcca94b9c)
 
 ### Dasbor User - Pengajuan
