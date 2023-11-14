@@ -111,6 +111,9 @@ input[type='password'] {
     /* color: ; */
 }
 
+.force-underline:hover {
+    text-decoration: underline;
+}
 
 .form {
     grid-area: form;

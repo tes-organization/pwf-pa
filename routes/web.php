@@ -17,12 +17,7 @@ use App\Http\Controllers\AutentikasiController;
 */
 
 //umum
-Route::get('/', function () {
-    return view('landingPage/landingPage');
-});
-Route::get('/spot-guest', function () {
-    return view('guest/spot-guest');
-});
+Route::get('/', SpotController::class, 'App\Http\Controllers\SpotController');
 
 // Register
 Route::get('/registrasi',[AutentikasiController::class, 'viewRegistrasi']);
@@ -51,5 +46,4 @@ Route::middleware(['auth', 'cekrole:staff'])->group(function () {
     Route::get('/terima-pengajuan-user/{no_pengajuan}',[PengajuanController::class,'updateterima']);
 });
 
-Route::get('/spot-guest',[SpotController::class, 'indexguest']);
 
