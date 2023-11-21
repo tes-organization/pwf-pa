@@ -19,11 +19,11 @@
                 @csrf
                 <div class="mb-4">
                   <label for="exampleInputEmail1" class="form-label text-success">Surel</label>
-                  <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan email Anda!">
+                  <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukan email Anda!" required="">
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label text-success">Kata Sandi*</label>
-                  <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Masukan password Anda!">
+                  <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Masukan password Anda!" required="">
                 </div>                
                 <div class="d-flex align-items-end fs-8">
                     <label>Belum punya akun? <a href="/registrasi" class="link-success link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">Register sekarang!</a></label>

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->date('tgl_pengajuan');
             $table->string('status');
 
-            $table->foreign('kelurahan')->references('id_kelurahan')->on('kelurahan')->onDelete('cascade');
+            // $table->foreign('kelurahan')->references('id_kelurahan')->on('kelurahan')->onDelete('cascade');
         });
     }
 

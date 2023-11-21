@@ -26,7 +26,7 @@
     <section class="container-fluid text-center row">
         <div class="d-flex flex-column align-items-center justify-content-center gap-5 col bg-success bg-gradient pt-5 vh100-height">
             <article class="d-flex justify-content-center align-items-center flex-column">
-                <h2 class="text-light">Didukung oleh:</h2>
+                <h2 class="text-light">Presented by:</h2>
                 <figure class="d-flex justify-content-center align-items-center">
                     <img class="w-25" src="assets/logo/pemprov-kaltim.png" alt="">
                     <img class="w-25" src="assets/logo/sungai-kunjang.png" alt="">
@@ -49,7 +49,7 @@
         </div>
     </section>
 
-    <section class="container py-5 my-5 text-center d-flex justify-content-center align-items-center">
+    {{-- <section class="container py-5 my-5 text-center d-flex justify-content-center align-items-center">
         <div class="row">
             <div class="col text-success-emphasis">
                 <div class="border border-success border-2 p-1 rounded-5">
@@ -76,7 +76,7 @@
                 <h5 class="fs-6">Pengajuan Ditolak</h5>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <footer class="vh40-height bg-black text-light d-flex justify-content-center align-items-center">
         <div class="container row">

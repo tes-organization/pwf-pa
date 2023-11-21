@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('lokasi');
             $table->string('no_pengajuan')->nullable();
 
-            $table->foreign('no_pengajuan')->references('no_pengajuan')->on('pengajuan')->onDelete('cascade');
+            // $table->foreign('no_pengajuan')->references('no_pengajuan')->on('pengajuan')->onDelete('cascade');
         });
     }
 
